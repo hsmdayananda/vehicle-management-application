@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="file-upload">
+      <h4>Please select your file : </h4>
+      <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+    </div>
+  </div>
+
+  <div class="row">
+    <table class="table">
+      <thead>
+        <th class="mdl-data-table__cell--non-numeric">ID</th>
+        <th class="mdl-data-table__cell--non-numeric">Car make</th>
+        <th class="mdl-data-table__cell--non-numeric">Car model</th>
+        <th class="mdl-data-table__cell--non-numeric">First name</th>
+        <th class="mdl-data-table__cell--non-numeric">Last name</th>
+        <th class="mdl-data-table__cell--non-numeric">Email</th>
+        <th class="mdl-data-table__cell--non-numeric">VIN number</th>
+        <th>Manufacture date</th>
+        <th>Options</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+          <td class="mdl-data-table__cell--non-numeric">{{vehicle.id}}</td>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.car_make}}</th>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.car_model}}</th>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.first_name}}</th>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.last_name}}</th>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.email}}</th>
+          <th class="mdl-data-table__cell--non-numeric">{{vehicle.vin_number}}</th>
+          <th>{{vehicle.manufac_date}}</th>
+          <th>
+            <input type="button" />Edit
+            <input type="button" />Delete
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+
+</div>
